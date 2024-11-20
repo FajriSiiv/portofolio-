@@ -7,6 +7,7 @@ import "../index.css";
 import transparentGridImg from "../assets/homepage-grid.png";
 import AboutMySkill from "../components/Home/AboutMySkill";
 import Showcase from "../components/Home/Showcase";
+import { WhatIDo } from "../components/Home/What-i-do";
 
 const Home = () => {
   return (
@@ -44,6 +45,7 @@ const Home = () => {
 
       <AboutMySkill />
       <Showcase />
+      <WhatIDo />
       <div className="h-screen"></div>
     </div>
   );
