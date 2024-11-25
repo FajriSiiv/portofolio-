@@ -3,6 +3,8 @@ import Layer from "../Section/Layer";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 import Image1 from "../../assets/portofolio-image/porto-img.png";
+import AnimationReveal from "../Animation/AnimationReveal";
+import TitleSection from "../Text/TitleSection";
 
 const Showcase = () => {
   const ShowcaseProject = () => {
@@ -33,7 +35,7 @@ const Showcase = () => {
         </div>
         <div className="flex-1 w-full h-[500px] font-matter flex flex-col justify-end items-start pb-10 gap-y-7">
           <h3 className="uppercase text-5xl font-extrabold tracking-wider text-left relative -left-32 bg-[#fee35d] p-3">
-            Portofolio Website
+            <AnimationReveal>Portofolio Website</AnimationReveal>
           </h3>
           <div className="flex flex-wrap gap-3">
             <p className="px-4 py-2 bg-primary text-secondary rounded-md uppercase font-semibold">
@@ -50,7 +52,7 @@ const Showcase = () => {
             </p>
           </div>
           <div className="flex gap-x-2 justify-center items-center">
-            <h3 className="text-2xl font-light uppercase">Visit Github</h3>
+            <h3 className="text-2xl font-light uppercase">Visit Website</h3>
             <FiArrowRight size={32} />
           </div>
         </div>
@@ -61,9 +63,8 @@ const Showcase = () => {
   return (
     <Layer className="">
       <div className="h-fit p-10">
-        <h2 className="uppercase text-5xl font-bold tracking-wider">
-          Showcase
-        </h2>
+        <TitleSection>Show case</TitleSection>
+
         <div className="w-full h-full mt-10">
           <ShowcaseProject />
           <ShowcaseProject />

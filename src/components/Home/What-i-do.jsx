@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Layer from "../Section/Layer";
 
 import { motion, useAnimationFrame } from "framer-motion";
+import AnimationReveal from "../Animation/AnimationReveal";
+import { VelocityText } from "../VelocityText";
+import TitleSection from "../Text/TitleSection";
 
 const Accordion = ({ items }) => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -20,7 +23,7 @@ const Accordion = ({ items }) => {
               openIndex === index ? "bg-gray-100" : "bg-transparent"
             }`}
           >
-            {item.title}
+            <AnimationReveal>{item.title}</AnimationReveal>
             <motion.span
               animate={{
                 rotate: openIndex === index ? 180 : 0,
@@ -77,34 +80,21 @@ export const WhatIDo = () => {
     },
   ];
 
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const ref = useRef();
 
-  useAnimationFrame((time) => {
-    const radius = 100; // Radius lingkaran
-    const angle = (time / 1000) * 2 * Math.PI; // Mengonversi waktu ke sudut (radian)
-
-    // Hitung posisi x dan y berdasarkan trigonometri
-    const x = radius * Math.cos(angle);
-    const y = radius * Math.sin(angle);
-
-    setPosition({ x, y });
-  });
   return (
     <Layer>
-      <div className="p-5 grid grid-cols-2 h-[600px] gap-x-10">
-        <div className="relative p-5 bg-rose-500 w-full h-full">
-          {/* <motion.div
-            className="w-[100px] h-[100px] bg-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-            style={{
-              translateX: position.x,
-              translateY: position.y,
-            }}
-          ></motion.div> */}
+      <div className="p-5 grid grid-cols-2 h-[600px] gap-x-10 overflow-hidden">
+        <div className="relative bg-secondary w-full h-fit py-5 flex flex-col overflow-hidden cursor-default rounded-md rotate-12 scale-150">
+          <VelocityText refVelo={ref} word="React. " />
+          <VelocityText refVelo={ref} reverse word="Figma. " />
+          <VelocityText refVelo={ref} word="Node.JS " />
+          <VelocityText refVelo={ref} reverse word="Next.JS " />
+          <VelocityText refVelo={ref} word="TailwindCSS " />
+          <VelocityText refVelo={ref} reverse word="Framer motion " />
         </div>
-        <div className="flex flex-col h-full gap-y-4">
-          <h2 className="uppercase tracking-wider text-4xl font-extrabold">
-            What i can do
-          </h2>
+        <div className="flex flex-col h-full gap-y-4 z-10 bg-white p-5 rounded-md">
+          <TitleSection>What i can do</TitleSection>
 
           <Accordion items={accordionWhatIDo} />
         </div>

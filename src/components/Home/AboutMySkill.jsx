@@ -3,6 +3,7 @@ import { FaFigma, FaNodeJs } from "react-icons/fa6";
 import { GrReactjs } from "react-icons/gr";
 import { RiNextjsLine, RiTailwindCssLine } from "react-icons/ri";
 import Layer from "../Section/Layer";
+import AnimationReveal from "../Animation/AnimationReveal";
 
 const AboutMySkill = () => {
   const CardSkill = ({ icon, text, className, classNameText }) => {
