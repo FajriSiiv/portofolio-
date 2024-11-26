@@ -19,9 +19,9 @@ const AboutMySkill = () => {
 
   return (
     <Layer className="bg-opacity-0 shadow-none">
-      <div className="flex justify-between items-center max-h-[200px] h-full w-full py-4 gap-x-5 px-10">
-        <p className="font-matter text-2xl font-semibold flex-1">Skills</p>
-        <div className="flex-[7] grid grid-flow-col">
+      <div className="flex justify-between items-center max-h-[200px] h-full w-full py-4 gap-x-5 px-10 xs:flex-col xs:max-h-fit xs:gap-y-4">
+        {/* <p className="font-matter text-2xl font-semibold flex-1">Skills</p> */}
+        <div className="flex-[7] grid grid-flow-col xs:flex xs:flex-col xs:gap-y-4 sm:grid-cols-2 sm:grid-rows-3 sm:gap-5">
           <CardSkill icon={<GrReactjs size={34} />} text="react" />
           <CardSkill icon={<RiNextjsLine size={34} />} text="nextJS" />
           <CardSkill icon={<FaNodeJs size={34} />} text="nodeJS" />

@@ -1,7 +1,7 @@
 import { useInView, motion, useAnimation } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
-const AnimationReveal = ({ children, width = "fit-content" }) => {
+const AnimationReveal = ({ children, width = "fit-content", delaySec = 0 }) => {
   const ref = useRef();
   const isInView = useInView(ref, { once: true });
 
@@ -24,7 +24,7 @@ const AnimationReveal = ({ children, width = "fit-content" }) => {
         }}
         initial="hidden"
         animate={mainAnimation}
-        transition={{ duration: 0.5, delay: 0.25 }}
+        transition={{ duration: 0.5, delay: 0.25 + delaySec }}
       >
         {children}
       </motion.div>
@@ -35,7 +35,7 @@ const AnimationReveal = ({ children, width = "fit-content" }) => {
         }}
         initial="hidden"
         animate={slideAnimation}
-        transition={{ duration: 0.5, ease: "easeIn" }}
+        transition={{ duration: 0.5, delay: delaySec, ease: "easeIn" }}
         className="absolute top-1 bottom-1 left-0 right-0 z-20 bg-primary"
       ></motion.div>
     </div>

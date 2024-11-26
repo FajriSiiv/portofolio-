@@ -5,7 +5,7 @@ const Button = ({ icon, text, className, components = "button", ...props }) => {
     <>
       {components === "button" ? (
         <button
-          className={`py-2 px-5 bg-primary text-secondary font-semibold rounded-md text-lg flex items-center justify-center gap-x-2 border border-primary hover:bg-secondary hover:text-primary transition-all cursor-pointer ${className}`}
+          className={`py-2 px-5 bg-primary text-secondary font-semibold rounded-md text-lg flex items-center justify-center gap-x-2 border border-primary hover:bg-secondary hover:text-primary transition-all cursor-pointer xs:px-3 xs:py-1 xs:text-sm sm:text-base ${className}`}
           {...props}
         >
           {icon ? icon : null}
@@ -14,7 +14,7 @@ const Button = ({ icon, text, className, components = "button", ...props }) => {
       ) : null}
       {components === "a" ? (
         <a
-          className={`py-2 px-5 bg-primary text-secondary font-semibold rounded-md text-lg flex items-center justify-center gap-x-2 border border-primary hover:bg-secondary hover:text-primary transition-all cursor-pointer ${className}`}
+          className={`py-2 px-5 bg-primary text-secondary font-semibold rounded-md text-lg flex items-center justify-center gap-x-2 border border-primary hover:bg-secondary hover:text-primary transition-all cursor-pointer xs:px-3 xs:py-1 xs:text-sm sm:text-base ${className}`}
           {...props}
         >
           {icon ? icon : null}

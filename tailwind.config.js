@@ -14,6 +14,12 @@ export default {
       },
       fontFamily: { matter: ["Matter"] },
     },
+    screens: {
+      lg: { max: "1600px" },
+      md: { max: "1024px" },
+      sm: { max: "768px" },
+      xs: { max: "500px" },
+    },
   },
   plugins: [],
 };

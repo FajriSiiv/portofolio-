@@ -12,6 +12,7 @@ export const VelocityText = ({ word, refVelo, reverse }) => {
   const { scrollYProgress } = useScroll({
     target: refVelo,
     offset: ["start start", "end start"],
+    layoutEffect: false,
   });
 
   const scrollVelocity = useVelocity(scrollYProgress);
@@ -39,7 +40,7 @@ export const VelocityText = ({ word, refVelo, reverse }) => {
       <div className="flex h-fit items-center overflow-hidden">
         <motion.p
           style={{ skewX, x }}
-          className="origin-bottom-left whitespace-nowrap text-[90px] font-black uppercase leading-[0.85]  md:leading-[0.85]"
+          className="origin-bottom-left whitespace-nowrap text-[90px] font-black uppercase leading-[0.85]  md:leading-[0.85] xs:text-5xl"
         >
           {wordsArray
             .join(" ")

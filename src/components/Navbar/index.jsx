@@ -2,9 +2,12 @@ import React from "react";
 import Button from "../Button/button";
 import { BsGithub } from "react-icons/bs";
 import { useScroll, motion, useTransform } from "framer-motion";
+import TransitionLink from "../TransitionLink";
 
 const Navbar = () => {
-  const { scrollY } = useScroll();
+  const { scrollY } = useScroll({
+    layoutEffect: false,
+  });
   const backgroundColor = useTransform(
     scrollY,
     [60, 100],
@@ -22,15 +25,18 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="fixed px-6 py-2 bg-transparent text-primary top-5 left-1/2 max-w-[1170px] w-full -translate-x-1/2 rounded-[1rem] h-[60px] flex items-center justify-between z-50 "
+      className="fixed px-6 py-2 bg-transparent text-primary top-5 left-1/2 max-w-[1170px] w-full -translate-x-1/2 rounded-[1rem] h-[60px] flex items-center justify-between z-50 xs:hidden"
       style={{ backgroundColor, boxShadow: boxShadowNav }}
       initial={{ backgroundColor: "transparent" }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
       <p className="text-lg uppercase tracking-wide font-semibold">Indonesia</p>
       <div className="flex justify-center items-center gap-x-5 text-lg">
-        <p>Home</p>
-        <p>Showcase</p>
+        <TransitionLink label="Home" href="/" />
+        {/* 
+        <TransitionLink label="Showcase" href="/showcase" /> */}
+        {/* <a href="/">Home</a>
+        <a href="/showcase">Showcase</a> */}
         <Button
           className="rounded-[1rem]"
           components="a"

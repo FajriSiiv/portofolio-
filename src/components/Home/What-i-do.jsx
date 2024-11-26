@@ -41,9 +41,9 @@ const Accordion = ({ items }) => {
               opacity: openIndex === index ? 1 : 0,
             }}
             transition={{ duration: 0.3 }}
-            className="overflow-hidden px-4 text-lg "
+            className="overflow-hidden px-4 text-lg xs:text-base"
           >
-            <div className="py-2 h-[150px]">{item.content}</div>
+            <div className="py-2 h-[150px] xs:text-sm">{item.content}</div>
           </motion.div>
         </div>
       ))}
@@ -56,7 +56,7 @@ export const WhatIDo = () => {
     {
       title: "What skills do you have?",
       content:
-        "I have both Front-end and Back-end skills, including expertise in React, Figma, Next.js, Node.js, Tailwind CSS, Zustand, Shadcn UI, Postman, Framer Motion, GSAP, Supabase, MySQL, and many other frameworks and tools.",
+        "I have both Front-end and Back-end skills, including expertise in React, Figma, Next.js, Node.js, Tailwind CSS, State Management (Zustand), Shadcn UI, Postman, Framer Motion, GSAP, Supabase, MySQL, and many other frameworks and tools.",
     },
     {
       title: "What projects have you worked on?",
@@ -84,8 +84,8 @@ export const WhatIDo = () => {
 
   return (
     <Layer>
-      <div className="p-5 grid grid-cols-2 h-[600px] gap-x-10 overflow-hidden">
-        <div className="relative bg-secondary w-full h-fit py-5 flex flex-col overflow-hidden cursor-default rounded-md rotate-12 scale-150">
+      <div className="p-5 grid grid-cols-2 h-[600px] gap-x-10 overflow-hidden relative md:h-fit">
+        <div className="relative bg-secondary w-full h-fit py-5 flex flex-col overflow-hidden cursor-default rounded-md rotate-12 scale-150 sm:absolute sm:left-0 sm:top-1/3">
           <VelocityText refVelo={ref} word="React. " />
           <VelocityText refVelo={ref} reverse word="Figma. " />
           <VelocityText refVelo={ref} word="Node.JS " />
@@ -93,7 +93,7 @@ export const WhatIDo = () => {
           <VelocityText refVelo={ref} word="TailwindCSS " />
           <VelocityText refVelo={ref} reverse word="Framer motion " />
         </div>
-        <div className="flex flex-col h-full gap-y-4 z-10 bg-white p-5 rounded-md">
+        <div className="flex flex-col h-full gap-y-4 z-10 bg-white p-5 rounded-md sm:col-span-2">
           <TitleSection>What i can do</TitleSection>
 
           <Accordion items={accordionWhatIDo} />

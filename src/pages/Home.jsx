@@ -15,15 +15,15 @@ const Home = () => {
   return (
     <div className="pt-24">
       <Layer className="">
-        <div className="overflow-hidden w-full h-[500px] flex justify-center items-center relative text-primary">
-          <div className="flex-[2] flex justify-center items-center flex-col z-10 cursor-default p-10">
-            <AnimationReveal>
-              <p className="text-[40px] font-extrabold leading-tight uppercase text-center">
+        <div className="overflow-hidden w-full h-[500px] flex justify-center items-center relative text-primary xs:h-[400px]">
+          <div className="flex-[2] flex justify-center items-center flex-col z-10 cursor-default p-10 xs:p-2 sm:p-4">
+            <AnimationReveal delaySec={0.6}>
+              <p className="text-[40px] font-extrabold leading-tight uppercase text-center xs:text-lg sm:text-2xl">
                 Hello, I'm Fajri.
               </p>
             </AnimationReveal>
-            <AnimationReveal>
-              <h1 className="text-[40px] font-extrabold leading-tight uppercase text-center">
+            <AnimationReveal delaySec={0.6}>
+              <h1 className="text-[40px] font-extrabold leading-tight uppercase text-center xs:text-lg sm:text-2xl">
                 A Skilled in <span className="text-[#9381ff]"> React</span>,{" "}
                 <span className="text-[#eb5e28]">Next.js</span>, and
                 <span className="text-[#ffca3a]"> node.js</span>. focused on
@@ -43,15 +43,15 @@ const Home = () => {
             <img
               src={transparentGridImg}
               alt="homepage grid"
-              className="absolute right-0 top-0 translate-x-1/3 -z-10 w-[1000px] h-[500px] object-contain opacity-40"
+              className="absolute right-0 top-0 translate-x-1/3 -z-10 w-[1000px] h-[500px] object-contain opacity-40 md:object-cover"
             />
           </div>
         </div>
       </Layer>
 
       <AboutMySkill />
-      <Showcase />
       <WhatIDo />
+      <Showcase />
       <Contact />
     </div>
   );
