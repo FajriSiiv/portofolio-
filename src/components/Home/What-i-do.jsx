@@ -83,7 +83,7 @@ export const WhatIDo = () => {
   const ref = useRef();
 
   return (
-    <Layer>
+    <Layer id="about">
       <div className="p-5 grid grid-cols-2 h-[600px] gap-x-10 overflow-hidden relative md:h-fit">
         <div className="relative bg-secondary w-full h-fit py-5 flex flex-col overflow-hidden cursor-default rounded-md rotate-12 scale-150 sm:absolute sm:left-0 sm:top-1/3">
           <VelocityText refVelo={ref} word="React. " />

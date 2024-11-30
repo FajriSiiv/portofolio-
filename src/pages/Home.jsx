@@ -13,7 +13,7 @@ import Contact from "../components/Home/Contact";
 
 const Home = () => {
   return (
-    <div className="pt-24">
+    <div className="pt-10">
       <Layer className="">
         <div className="overflow-hidden w-full h-[500px] flex justify-center items-center relative text-primary xs:h-[400px]">
           <div className="flex-[2] flex justify-center items-center flex-col z-10 cursor-default p-10 xs:p-2 sm:p-4">

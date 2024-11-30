@@ -16,7 +16,7 @@ const App = () => {
     <Routes>
       <Route element={<LayoutTemplate />}>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/showcase" element={<Showcase />} /> */}
+        <Route path="/showcase" element={<Showcase />} />
       </Route>
     </Routes>
   );

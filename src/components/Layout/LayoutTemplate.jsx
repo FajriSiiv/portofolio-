@@ -5,14 +5,14 @@ import Template from "../../template";
 
 const LayoutTemplate = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <main className="flex-grow container mx-auto">
         <Template>
           <Outlet />
         </Template>
       </main>
-    </div>
+    </>
   );
 };
 

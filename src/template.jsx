@@ -29,7 +29,7 @@ export default function Template({ children }) {
 
   return (
     <div>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {loading && (
           <motion.div
             className="fixed inset-0 flex flex-col items-center justify-center bg-neutral-950 text-white z-50"
@@ -68,7 +68,8 @@ export default function Template({ children }) {
           />
           {children}
         </>
-      )}
+      )} */}
+      {children}
     </div>
   );
 }
