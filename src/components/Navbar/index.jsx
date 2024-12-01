@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Button from "../Button/button";
-import { BsGithub } from "react-icons/bs";
 import { useScroll, motion, useTransform } from "framer-motion";
-import TransitionLink from "../TransitionLink";
-
-import navImg1 from "../../assets/nav-img/abstrak-1.jpg";
-import navImg2 from "../../assets/nav-img/abstrak-2.jpg";
-import navImg3 from "../../assets/nav-img/abstrak-3.jpg";
+import { linkNav } from "../../constants";
 
 const Navbar = () => {
   const [navClick, setnavClick] = useState(false);
@@ -93,12 +87,6 @@ const Navbar = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  const linkNav = [
-    { name: "Home", url: "/", color: "#ff0040", imgUrl: navImg1 },
-    { name: "Showcase", url: "/showcase", color: "#505fff", imgUrl: navImg2 },
-    { name: "About", url: "/#about", color: "#fffd7d", imgUrl: navImg3 },
-  ];
 
   return (
     <>

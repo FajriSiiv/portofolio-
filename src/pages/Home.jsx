@@ -17,12 +17,12 @@ const Home = () => {
       <Layer className="">
         <div className="overflow-hidden w-full h-[500px] flex justify-center items-center relative text-primary xs:h-[400px]">
           <div className="flex-[2] flex justify-center items-center flex-col z-10 cursor-default p-10 xs:p-2 sm:p-4">
-            <AnimationReveal delaySec={0.6}>
+            <AnimationReveal>
               <p className="text-[40px] font-extrabold leading-tight uppercase text-center xs:text-lg sm:text-2xl">
                 Hello, I'm Fajri.
               </p>
             </AnimationReveal>
-            <AnimationReveal delaySec={0.6}>
+            <AnimationReveal>
               <h1 className="text-[40px] font-extrabold leading-tight uppercase text-center xs:text-lg sm:text-2xl">
                 A Skilled in <span className="text-[#9381ff]"> React</span>,{" "}
                 <span className="text-[#eb5e28]">Next.js</span>, and
