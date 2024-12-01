@@ -59,3 +59,10 @@ body {
 .hoverText {
   transition: 0.35s color;
 }
+
+.bg-showcase {
+  background-image: url("./assets/background/bg-showcase.png");
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+  background-size: 20rem;
+}

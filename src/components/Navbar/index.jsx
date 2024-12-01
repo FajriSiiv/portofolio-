@@ -224,6 +224,7 @@ const Navbar = () => {
                     rotate: "45deg",
                     scale: 1.8,
                     backgroundColor: "rgb(244, 62, 93)",
+                    width: "40px",
                   }
                 : {
                     top: "calc(99% - 6.5px)",
@@ -241,7 +242,7 @@ const Navbar = () => {
               backgroundColor: "#fff",
             }}
             transition={transitionTogether}
-            className="w-10 h-1.5  absolute top-1/2 left-0 rounded-sm "
+            className="w-5 h-1.5  absolute top-1/2 left-0 rounded-sm "
           ></motion.div>
         </motion.div>
       </motion.div>
