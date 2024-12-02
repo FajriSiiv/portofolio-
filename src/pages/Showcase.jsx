@@ -9,7 +9,7 @@ const Showcase = () => {
   return (
     <div className="pt-24">
       <Layer className="!bg-transparent !shadow-none">
-        <h1 className="uppercase text-7xl font-black text-center mb-10">
+        <h1 className="uppercase text-7xl font-black text-center mb-10 md:text-3xl sm:text-xl">
           Showcase
         </h1>
         <div className="flex justify-evenly flex-wrap gap-5 sm:flex-col sm:px-5">
