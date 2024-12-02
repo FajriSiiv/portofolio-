@@ -12,7 +12,7 @@ const Showcase = () => {
         <h1 className="uppercase text-7xl font-black text-center mb-10">
           Showcase
         </h1>
-        <div className="flex justify-evenly flex-wrap gap-5">
+        <div className="flex justify-evenly flex-wrap gap-5 md:flex-col md:px-5">
           {showcaseJson.map((project, index) => (
             <ShowcaseProject
               key={index}
@@ -22,9 +22,6 @@ const Showcase = () => {
               no={index + 1}
             />
           ))}
-          {/* <ShowcaseProject margin={true} />
-          <ShowcaseProject />
-          <ShowcaseProject margin={true} /> */}
         </div>
       </Layer>
     </div>
@@ -44,7 +41,9 @@ const ShowcaseProject = ({ img, name, url, no }) => {
   return (
     <motion.a
       ref={ref}
-      className={`w-[40%] h-[400px]  ${marginTop ? "mt-24" : "mt-0"}`}
+      className={`w-[40%] h-[400px] md:w-full  ${
+        marginTop ? "mt-24 md:mt-0" : "mt-0"
+      }`}
       style={{
         y,
       }}
