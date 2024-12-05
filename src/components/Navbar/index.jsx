@@ -119,6 +119,7 @@ const Navbar = () => {
                 top: "10px",
                 left: "10px",
                 scale: 0.7,
+                background: "#000",
               }
             : {
                 left: "40px",

@@ -9,7 +9,7 @@ const Showcase = () => {
   return (
     <div className="pt-24">
       <Layer className="!bg-transparent !shadow-none">
-        <h1 className="uppercase text-7xl font-black text-center mb-10 md:text-3xl sm:text-xl">
+        <h1 className="uppercase text-7xl font-black text-center mb-10 md:text-3xl sm:text-2xl">
           Showcase
         </h1>
         <div className="flex justify-evenly flex-wrap gap-5 sm:flex-col sm:px-5">
@@ -58,9 +58,9 @@ const ShowcaseProject = ({ img, name, url, no }) => {
             className="w-full h-full object-cover hover:scale-105 transition-all"
           />
         </div>
-        <div className="flex justify-between w-full uppercase text-3xl font-black">
-          <h1>{no}</h1>
-          <h1>{name}</h1>
+        <div className="flex justify-between w-full uppercase text-3xl font-black xs:text-xl">
+          <p className="xs:hidden">{no}</p>
+          <p>{name}</p>
         </div>
       </div>
     </motion.a>
