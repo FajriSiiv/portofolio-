@@ -7,12 +7,18 @@ import eduCourse from "../assets/portofolio-image/eduCourse.jpg";
 import todoApp from "../assets/portofolio-image/todoApp.png";
 import brainWave from "../assets/portofolio-image/brainWave.png";
 import meiroClone from "../assets/portofolio-image/meiro-clone.png";
+import eventOrg from "../assets/portofolio-image/event-crud.png";
 
 export const showcaseJson = [
   {
     name: "Kreasi Hexa",
     url: "https://www.kreasihexa.com/",
     img: kreasiHexa,
+  },
+  {
+    name: "Event Organizer",
+    url: "https://events-org-siiv.vercel.app/",
+    img: eventOrg,
   },
   {
     name: "Meiro Clone",

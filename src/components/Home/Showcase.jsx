@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Layer from "../Section/Layer";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
-import Image1 from "../../assets/portofolio-image/porto-img.png";
+import Image1 from "../../assets/portofolio-image/event-crud.png";
 import KreasiHexa from "../../assets/portofolio-image/kreasihexa-img.png";
 import AnimationReveal from "../Animation/AnimationReveal";
 import TitleSection from "../Text/TitleSection";
@@ -74,10 +74,10 @@ const Showcase = () => {
     },
     {
       id: 2,
-      title: "Portofolio Website",
-      urlLink: "/",
+      title: "Event organizer",
+      urlLink: "https://events-org-siiv.vercel.app/",
       imgUrl: Image1,
-      skilss: ["React.JS", "TailwindCSS", "GSAP", "Framer-Motion"],
+      skilss: ["React.JS", "TailwindCSS", "MongoDB", "NestJS"],
     },
   ];
 
