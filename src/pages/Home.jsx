@@ -35,10 +35,16 @@ const Home = () => {
                 text="Github"
                 icon={<BsGithub />}
                 components="a"
-                href="https://ui.shadcn.com/docs/installation/vite"
+                href="https://github.com/FajriSiiv"
                 target="_blank"
               />
-              <Button text="LinkedIn" icon={<BsLinkedin />} />
+              <Button
+                components="a"
+                href="https://www.linkedin.com/in/muhammad-fajri-8741031ba/"
+                text="LinkedIn"
+                icon={<BsLinkedin />}
+                target="_blank"
+              />
             </div>
             <img
               src={transparentGridImg}

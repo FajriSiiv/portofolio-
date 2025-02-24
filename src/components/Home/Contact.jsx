@@ -15,21 +15,21 @@ const Contact = () => {
             text="Github"
             icon={<BsGithub />}
             components="a"
-            href="https://ui.shadcn.com/docs/installation/vite"
+            href="https://github.com/FajriSiiv"
             target="_blank"
           />
           <Button
             text="LinkedIn"
             icon={<BsLinkedin />}
             components="a"
-            href="https://ui.shadcn.com/docs/installation/vite"
+            href="https://www.linkedin.com/in/muhammad-fajri-8741031ba/"
             target="_blank"
           />
           <Button
             text="Email"
             icon={<MdEmail />}
             components="a"
-            href="https://ui.shadcn.com/docs/installation/vite"
+            href="mailto:fajrijijin@gmail.com"
             target="_blank"
           />
         </div>

@@ -8,12 +8,18 @@ import todoApp from "../assets/portofolio-image/todoApp.png";
 import brainWave from "../assets/portofolio-image/brainWave.png";
 import meiroClone from "../assets/portofolio-image/meiro-clone.png";
 import eventOrg from "../assets/portofolio-image/event-crud.png";
+import vueNime from "../assets/portofolio-image/vue-anime-search.webp";
 
 export const showcaseJson = [
   {
     name: "Kreasi Hexa",
     url: "https://www.kreasihexa.com/",
     img: kreasiHexa,
+  },
+  {
+    name: "Vue Search Anime",
+    url: "https://vue-siivnime.vercel.app/",
+    img: vueNime,
   },
   {
     name: "Event Organizer",
