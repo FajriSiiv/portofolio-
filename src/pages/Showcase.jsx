@@ -4,6 +4,8 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import KreasiHexaProject from "../assets/portofolio-image/kreasihexa-img.png";
 import PortofolioProject from "../assets/portofolio-image/porto-img.png";
 import { showcaseJson } from "../constants/showcase";
+import { TbWorld } from "react-icons/tb";
+import { BsGithub } from "react-icons/bs";
 
 const Showcase = () => {
   return (
@@ -20,6 +22,7 @@ const Showcase = () => {
               name={project.name}
               url={project.url}
               no={index + 1}
+              url_github={project.url_github}
             />
           ))}
         </div>
@@ -28,7 +31,7 @@ const Showcase = () => {
   );
 };
 
-const ShowcaseProject = ({ img, name, url, no }) => {
+const ShowcaseProject = ({ img, name, url, no ,url_github}) => {
   const ref = useRef();
   const marginTop = no % 2 === 0;
   const { scrollYProgress } = useScroll({
@@ -54,14 +57,28 @@ const ShowcaseProject = ({ img, name, url, no }) => {
         <div className="w-full h-[300px] bg-white rounded-md overflow-hidden">
           <img
             src={img}
-            alt="Project 1"
+            alt={name}
             className="w-full h-full object-cover hover:scale-105 transition-all"
           />
         </div>
-        <div className="flex justify-between w-full uppercase text-3xl font-black xs:text-xl">
-          <p className="xs:hidden">{no}</p>
-          <p>{name}</p>
+        <div className="flex justify-between w-full uppercase text-3xl font-black xs:text-xl gap-10">
+           <div className="flex gap-2 text-lg h-fit">
+          {url_github && (
+            <a href={url_github} target="_blank" className="p-2 rounded-md border-primary border">
+              <BsGithub />
+            </a>
+          )}
+          {url && (
+            <a href={url} target="_blank" className="p-2 rounded-md border-primary border">
+              <TbWorld  />
+            </a>
+          )}
+
         </div>
+          <p className="text-right"  >{name}</p>
+        </div>
+
+       
       </div>
     </motion.a>
   );

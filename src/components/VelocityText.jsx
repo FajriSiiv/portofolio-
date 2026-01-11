@@ -5,7 +5,6 @@ import {
   useTransform,
   useSpring,
 } from "framer-motion";
-import React, { useRef } from "react";
 import "../index.css";
 
 export const VelocityText = ({ word, refVelo, reverse }) => {
@@ -40,7 +39,7 @@ export const VelocityText = ({ word, refVelo, reverse }) => {
       <div className="flex h-fit items-center overflow-hidden">
         <motion.p
           style={{ skewX, x }}
-          className="origin-bottom-left whitespace-nowrap text-[90px] font-black uppercase leading-[0.85]  md:leading-[0.85] xs:text-5xl"
+          className="origin-bottom-left whitespace-nowrap text-[70px] font-black uppercase leading-[0.85]  md:leading-[0.85] xs:text-5xl"
         >
           {wordsArray
             .join(" ")

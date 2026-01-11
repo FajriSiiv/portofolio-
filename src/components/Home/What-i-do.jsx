@@ -61,7 +61,7 @@ export const WhatIDo = () => {
     {
       title: "What projects have you worked on?",
       content:
-        "I've worked on a variety of projects, a personal portfolio, and a task management app. These projects utilized React, Next.js, and Supabase for dynamic and scalable applications.",
+        "I've worked on a variety of projects, a personal portfolio, and a task management app. These projects utilized React, Vue, Nuxt.js, Next.js, and Supabase for dynamic and scalable applications.",
     },
     {
       title: "What services do you offer?",
@@ -85,13 +85,15 @@ export const WhatIDo = () => {
   return (
     <Layer id="about">
       <div className="p-5 grid grid-cols-2 h-[600px] gap-x-10 overflow-hidden relative md:h-fit">
-        <div className="relative bg-secondary w-full h-fit py-5 flex flex-col overflow-hidden cursor-default rounded-md rotate-12 scale-150 sm:absolute sm:left-0 sm:top-1/3">
+        <div className="relative bg-secondary w-full h-fit py-10 flex flex-col overflow-hidden cursor-default rounded-md rotate-12 scale-150 sm:absolute sm:left-0 sm:top-1/3">
           <VelocityText refVelo={ref} word="React. " />
           <VelocityText refVelo={ref} reverse word="Figma. " />
           <VelocityText refVelo={ref} word="Node.JS " />
           <VelocityText refVelo={ref} reverse word="Next.JS " />
           <VelocityText refVelo={ref} word="TailwindCSS " />
           <VelocityText refVelo={ref} reverse word="Framer motion " />
+          <VelocityText refVelo={ref} reverse word="Nuxt.JS " />
+          <VelocityText refVelo={ref} reverse word="Vue " />
         </div>
         <div className="flex flex-col h-full gap-y-4 z-10 bg-white p-5 rounded-md sm:col-span-2">
           <TitleSection>What i can do</TitleSection>
